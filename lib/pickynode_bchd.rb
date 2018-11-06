@@ -24,7 +24,7 @@ class PickynodeBCHD
       .select { |_, v| v.include?(filter) }
       .each_with_index do |(k, _), i|
         break if limit == i
-        run_cmd(%(bchctl addnode "#{k}" "add"))
+        run_cmd(%(bchctl addnode "#{k}" add))
       end
   end
 

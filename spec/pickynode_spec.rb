@@ -31,10 +31,10 @@ describe PickynodeBCHD do
       expect(subject).to receive(:blockchair_snapshot).once
         .and_return(BLOCKCHAIR_SNAPSHOT)
       expect(subject).to receive(:run_cmd)
-        .with(%(bchctl addnode "#{ipv6_ip}" "add"))
+        .with(%(bchctl addnode "#{ipv6_ip}" add))
       subject.add('ABC')
       expect(subject).to receive(:run_cmd)
-        .with('bchctl addnode "88.99.199.87:8333" "add"')
+        .with('bchctl addnode "88.99.199.87:8333" add')
       subject.add('Unlimited')
     end
 
@@ -64,7 +64,7 @@ describe PickynodeBCHD do
         expect(subject).to receive(:blockchair_snapshot).once
           .and_return(BLOCKCHAIR_SNAPSHOT)
         expect(subject).to receive(:run_cmd)
-          .with('bchctl addnode "88.99.199.87:8333" "add"')
+          .with('bchctl addnode "88.99.199.87:8333" add')
         subject.add('i', 1)
       end
 
@@ -72,9 +72,9 @@ describe PickynodeBCHD do
         expect(subject).to receive(:blockchair_snapshot).once
           .and_return(BLOCKCHAIR_SNAPSHOT)
         expect(subject).to receive(:run_cmd)
-          .with('bchctl addnode "88.99.199.87:8333" "add"')
+          .with('bchctl addnode "88.99.199.87:8333" add')
         expect(subject).to receive(:run_cmd)
-          .with(%(bchctl addnode "#{ipv6_ip}" "add"))
+          .with(%(bchctl addnode "#{ipv6_ip}" add))
         subject.add('i', 2)
       end
     end
@@ -298,16 +298,16 @@ describe PickynodeBCHD do
       expect(subject).to receive(:blockchair_snapshot).once
         .and_return(BLOCKCHAIR_SNAPSHOT)
       expect(subject).to receive(:run_cmd)
-        .with(%(bchctl addnode "#{ipv6_ip}" "add"))
+        .with(%(bchctl addnode "#{ipv6_ip}" add))
       expect(subject).to receive(:run_cmd)
-        .with('bchctl addnode "88.99.199.87:8333" "add"')
+        .with('bchctl addnode "88.99.199.87:8333" add')
       subject.add('ABC')
       subject.add('Unlimited')
       subject.clear_cache
       expect(subject).to receive(:blockchair_snapshot).once
         .and_return(BLOCKCHAIR_SNAPSHOT)
       expect(subject).to receive(:run_cmd)
-        .with(%(bchctl addnode "#{ipv6_ip}" "add"))
+        .with(%(bchctl addnode "#{ipv6_ip}" add))
       subject.add('ABC')
     end
 
