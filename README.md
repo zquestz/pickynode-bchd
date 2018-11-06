@@ -54,7 +54,7 @@ Options:
   -r, --remove=<s>        Remove node type
   -c, --connect=<s>       Connect to node type
   -s, --disconnect=<s>    Disconnect from node type
-  -l, --limit=<i>         Limit number of nodes to add/connect
+  -l, --limit=<i>         Limit number of nodes to add/remove/connect/disconnect
   -v, --version           Print version and exit
   -h, --help              Show this message
 ```
