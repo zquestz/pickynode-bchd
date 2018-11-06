@@ -45,7 +45,6 @@ pickynode-bchd --disconnect=USER_AGENT_FILTER
 ### Help:
 
 ```
-pickynode-bchd v0.1.0
 Options:
   -i, --info              Local node info
   -d, --debug             Debug mode
