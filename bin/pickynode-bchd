@@ -3,6 +3,8 @@
 
 require 'pickynode_bchd'
 
+limit_desc = 'Limit number of nodes to add/remove/connect/disconnect'
+
 opts = Trollop.options do
   version "pickynode-bchd v#{PickynodeBCHD::VERSION}"
   opt :info, 'Local node info'
@@ -12,7 +14,7 @@ opts = Trollop.options do
   opt :remove, 'Remove node type', type: :string
   opt :connect, 'Connect to node type', type: :string
   opt :disconnect, 'Disconnect from node type', type: :string
-  opt :limit, 'Limit number of nodes to add/remove/connect/disconnect', type: :integer
+  opt :limit, limit_desc, type: :integer
 end
 
 Trollop.die :limit, 'must be positive' if opts[:limit] && opts[:limit] <= 0
