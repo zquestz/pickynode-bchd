@@ -3,13 +3,13 @@
 require 'awesome_print'
 require 'json'
 require 'net/http'
-require 'trollop'
+require 'optimist'
 require 'uri'
 
 # Allows you to easily add/remove/connect/disconnect nodes
 # based on User Agent.
 class PickynodeBCHD
-  VERSION = '0.1.2'
+  VERSION = '0.1.3'
 
   def initialize(opts = {})
     @opts = opts
