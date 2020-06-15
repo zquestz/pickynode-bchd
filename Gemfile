@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby '>= 2.0'
+ruby '>= 2.5'
 
-gem 'awesome_print', '~> 1.7'
-gem 'optimist', '~> 3.0'
-gem 'rake', '~> 12.0'
-gem 'rspec', '~> 3.6'
-gem 'rubocop', '~> 0.48'
-gem 'simplecov', '~> 0.14', require: false, group: :test
+gem 'awesome_print', '~> 1.8.0'
+gem 'optimist', '~> 3.0.1'
+gem 'rake', '~> 13.0.1'
+gem 'rspec', '~> 3.9.0'
+gem 'rubocop', '~> 0.85.1'
+gem 'simplecov', '~> 0.18.5', require: false, group: :test
