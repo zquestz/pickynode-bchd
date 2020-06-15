@@ -9,7 +9,7 @@ require 'uri'
 # Allows you to easily add/remove/connect/disconnect nodes
 # based on User Agent.
 class PickynodeBCHD
-  VERSION = '0.1.3'
+  VERSION = '0.2.0'
 
   def initialize(opts = {})
     @opts = opts
@@ -24,6 +24,7 @@ class PickynodeBCHD
       .select { |_, v| v.include?(filter) }
       .each_with_index do |(k, _), i|
         break if limit == i
+
         run_cmd(%(bchctl addnode "#{k}" add))
       end
   end
@@ -37,6 +38,7 @@ class PickynodeBCHD
       .select { |_, v| v.include?(filter) }
       .each_with_index do |(k, _), i|
         break if limit == i
+
         run_cmd(%(bchctl node remove "#{k}"))
       end
   end
@@ -50,6 +52,7 @@ class PickynodeBCHD
       .select { |_, v| v.include?(filter) }
       .each_with_index do |(k, _), i|
         break if limit == i
+
         run_cmd(%(bchctl node connect "#{k}"))
       end
   end
@@ -63,6 +66,7 @@ class PickynodeBCHD
       .select { |_, v| v.include?(filter) }
       .each_with_index do |(k, _), i|
         break if limit == i
+
         run_cmd(%(bchctl node disconnect "#{k}"))
       end
   end
@@ -104,6 +108,7 @@ class PickynodeBCHD
 
   def addr_types
     return @addr_types if @addr_types
+
     nodes = getpeerinfo
     parsed_nodes = JSON.parse(nodes)
     @addr_types = parsed_nodes.map do |n|
@@ -115,10 +120,11 @@ class PickynodeBCHD
 
   def blockchair_addr_types
     return @blockchair_addr_types if @blockchair_addr_types
+
     parsed_nodelist = JSON.parse(blockchair_snapshot)
-    @blockchair_addr_types = parsed_nodelist['data']['nodes'].map do |k, v|
-      [k, v['version']]
-    end.to_h
+    @blockchair_addr_types = parsed_nodelist['data']['nodes'].transform_values do |v|
+      v['version']
+    end
   rescue JSON::ParserError
     {}
   end
