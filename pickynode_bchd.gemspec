@@ -22,6 +22,6 @@ bitcoin cash nodes they connect to with bchd."
 
   s.add_development_dependency 'rake', '~> 13.0.1'
   s.add_development_dependency 'rspec', '~> 3.9.0'
-  s.add_development_dependency 'rubocop', '~> 0.85.1'
+  s.add_development_dependency 'rubocop', '~> 0.88.0'
   s.add_development_dependency 'simplecov', '~> 0.18.5'
 end
