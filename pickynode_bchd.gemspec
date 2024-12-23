@@ -17,8 +17,10 @@ bitcoin cash nodes they connect to with bchd."
   s.require_paths = ['lib']
   s.required_ruby_version = '>= 2.5'
 
-  s.add_dependency 'awesome_print', '~> 1.8.0'
-  s.add_dependency 'optimist', '~> 3.0.1'
+  s.add_dependency 'awesome_print', '> 1.8.0'
+  s.add_dependency 'base64'
+  s.add_dependency 'optimist', '> 3.0.1'
+  s.add_dependency 'ostruct'
 
   s.add_development_dependency 'rake', '~> 13.0.1'
   s.add_development_dependency 'rspec', '~> 3.9.0'

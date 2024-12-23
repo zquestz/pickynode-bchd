@@ -9,7 +9,7 @@ require 'uri'
 # Allows you to easily add/remove/connect/disconnect nodes
 # based on User Agent.
 class PickynodeBCHD
-  VERSION = '0.2.1'
+  VERSION = '0.2.2'
 
   def initialize(opts = {})
     @opts = opts

@@ -1,7 +1,10 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: disable
 Metrics/ClassLength:
   Enabled: false
 Metrics/BlockLength:
-  ExcludedMethods: ['describe', 'context']
+  ExcludedMethods: ["describe", "context"]
 Style/NumericPredicate:
   Enabled: false
 Layout/EmptyLinesAroundAttributeAccessor:
