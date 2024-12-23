@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/pickynode-bchd.svg)](https://badge.fury.io/rb/pickynode-bchd) [![Build Status](https://app.travis-ci.com/zquestz/pickynode-bchd.svg?token=6MFuGdxALHX597TYtD8j&branch=master)](https://travis-ci.com/zquestz/pickynode-bchd) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Gem Version](https://badge.fury.io/rb/pickynode-bchd.svg)](https://badge.fury.io/rb/pickynode-bchd) [![Build Status](https://app.travis-ci.com/zquestz/pickynode-bchd.svg?token=6MFuGdxALHX597TYtD8j&branch=master)](https://app.travis-ci.com/zquestz/pickynode-bchd) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # pickynode-bchd
 
 Some people are picky about the bitcoin cash nodes they connect to with bchd.
