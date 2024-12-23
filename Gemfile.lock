@@ -2,20 +2,21 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    awesome_print (1.8.0)
+    awesome_print (1.9.2)
+    base64 (0.2.0)
     diff-lcs (1.5.1)
     docile (1.4.1)
-    optimist (3.0.1)
+    optimist (3.2.0)
+    ostruct (0.6.1)
     parallel (1.24.0)
-    parser (3.3.4.2)
+    parser (3.3.6.0)
       ast (~> 2.4.1)
       racc
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.0.6)
-    regexp_parser (2.9.2)
-    rexml (3.3.6)
-      strscan
+    regexp_parser (2.9.3)
+    rexml (3.4.0)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -44,16 +45,17 @@ GEM
     simplecov (0.18.5)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
-    simplecov-html (0.12.3)
-    strscan (3.1.0)
+    simplecov-html (0.13.1)
     unicode-display_width (1.8.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print (~> 1.8.0)
-  optimist (~> 3.0.1)
+  awesome_print (> 1.8.0)
+  base64
+  optimist (> 3.0.1)
+  ostruct
   rake (~> 13.0.1)
   rspec (~> 3.9.0)
   rubocop (~> 0.89.0)
